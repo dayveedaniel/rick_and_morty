@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_task/assets/app_sizes.dart';
 import 'package:test_task/features/common_widgets/shimmer_widget.dart';
+import 'package:test_task/utils/consts.dart';
 
 class CustomNetworkImage extends StatelessWidget {
   const CustomNetworkImage({
@@ -15,18 +16,21 @@ class CustomNetworkImage extends StatelessWidget {
     return Image.network(
       imagePath,
       fit: BoxFit.cover,
-      loadingBuilder: (
-        BuildContext context,
-        Widget child,
-        loadingProgress,
-      ) {
-        return loadingProgress == null
-            ? child
-            : const Shimmer(
-                height: Sizes.p160,
-                width: double.maxFinite,
-              );
-      },
+      // loadingBuilder: (
+      //   BuildContext context,
+      //   Widget child,
+      //   loadingProgress,
+      // ) {
+      //   return AnimatedSwitcher(
+      //     duration: duration300ms,
+      //     child: loadingProgress == null
+      //         ? child
+      //         : const Shimmer(
+      //             height: Sizes.p160,
+      //             width: double.maxFinite,
+      //           ),
+      //   );
+      // },
     );
   }
 }
