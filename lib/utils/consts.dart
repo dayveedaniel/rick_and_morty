@@ -1,0 +1,1 @@
+const duration300ms = Duration(milliseconds: 300);
