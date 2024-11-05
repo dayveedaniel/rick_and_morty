@@ -90,10 +90,13 @@ class CharacterTile extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Hero(
-                  tag: characterModel.id,
-                  child: CustomNetworkImage(
-                    imagePath: characterModel.image,
+                AnimatedSize(
+                  duration: duration100ms,
+                  child: Hero(
+                    tag: characterModel.id,
+                    child: CustomNetworkImage(
+                      imagePath: characterModel.image,
+                    ),
                   ),
                 ),
                 gapH12,
